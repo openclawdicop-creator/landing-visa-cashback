@@ -176,49 +176,101 @@ nav a:hover {
     transform: rotateY(0) rotateX(0);
 }
 
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
 .card-chip {
-    width: 12.5%;
-    height: 16%;
+    width: 50px;
+    height: 40px;
     background: linear-gradient(135deg, #d4af37 0%, #f9e29c 100%);
-    border-radius: 5px;
-    margin-bottom: 5%;
+    border-radius: 8px;
+    position: relative;
+}
+
+.card-chip::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 70%;
+    height: 70%;
+    border: 1px solid rgba(0,0,0,0.1);
+    border-radius: 4px;
 }
 
 .card-logo {
-    position: absolute;
-    top: 10%;
-    right: 6%;
-    font-size: 2.5rem;
+    position: static;
+    font-size: 3rem;
     color: #fff;
+    line-height: 1;
+}
+
+.card-middle {
+    margin-top: 20px;
 }
 
 .card-number {
-    font-size: clamp(1rem, 4vw, 1.4rem);
-    letter-spacing: 3px;
-    margin-bottom: 7.5%;
+    font-size: 1.5rem;
+    letter-spacing: 2px;
     font-family: 'Courier New', Courier, monospace;
+    color: #fff;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+    margin-bottom: 15px;
+}
+
+.card-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.card-info-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-label {
+    font-size: 0.6rem;
+    color: rgba(255,255,255,0.7);
+    text-transform: uppercase;
+    margin-bottom: 2px;
 }
 
 .card-holder {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 1px;
+    color: #fff;
+}
+
+.card-expiry-box {
+    text-align: right;
+    margin-right: 20px;
 }
 
 .card-expiry {
-    position: absolute;
-    bottom: 10%;
-    right: 20%;
-    font-size: 0.8rem;
+    position: static;
+    font-size: 0.9rem;
+    color: #fff;
 }
 
 .card-type {
-    position: absolute;
-    bottom: 10%;
-    right: 6%;
+    position: static;
     font-weight: 700;
     font-size: 0.8rem;
     color: var(--gold);
+    letter-spacing: 2px;
 }
 
 /* Features */
